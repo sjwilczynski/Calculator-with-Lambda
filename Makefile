@@ -1,13 +1,17 @@
-default: clean copy zip
+default: clean install copy zip
 
-build_dist:
-	mkdir dist
+install: dirs
+	pip install numpy -t build
 
-copy: build_dist
-	cp *.py dist/
+dirs:
+	mkdir build
 
-zip: build_dist
-	cd dist && zip -r lambda.zip .
+copy: dirs
+	cp *.py build/
+
+zip: copy
+	cd build && zip -r ../lambda.zip .
 
 clean:
-	rm -rf dist
+	rm -rf build
+	rm lambda.zip

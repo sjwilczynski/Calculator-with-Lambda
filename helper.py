@@ -1,11 +1,14 @@
+import numpy as np
+
+
 def process_request(params, operation):
     if operation == 'add':
-        return int(params['a']) + int(params['b'])
+        return np.float64(params['a']) + np.float64(params['b'])
     if operation == 'subtract':
-        return int(params['a']) - int(params['b'])
+        return np.float64(params['a']) - np.float64(params['b'])
     if operation == 'multiply':
-        return int(params['a']) * int(params['b'])
+        return np.float64(params['a']) * np.float64(params['b'])
     if operation == 'divide':
-        return float(params['a']) / float(params['b'])
+        return np.float64(params['a']) / np.float64(params['b'])
     if operation == 'eval':
         return eval(params['exp'])

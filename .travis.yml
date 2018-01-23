@@ -21,7 +21,7 @@ deploy:
   region: eu-central-1
   runtime: python2.7
   publish: true
-  zip: dist/lambda.zip
+  zip: lambda.zip
   role: $ROLE
 
 notifications:
