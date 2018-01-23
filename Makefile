@@ -14,4 +14,4 @@ zip: copy
 
 clean:
 	rm -rf build
-	rm lambda.zip
+	rm -rf lambda.zip
