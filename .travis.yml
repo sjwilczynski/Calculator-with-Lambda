@@ -17,8 +17,11 @@ deploy:
   access_key_id: $AWS_ACCESS_KEY_ID
   secret_access_key: $AWS_SECRET_ACCESS_KEY
   function_name: calculator
-  region: eu-cental-1
+  region: eu-central-1
   runtime: python2.7
   publish: true
   zip: dist/lambda.zip
   role: $ROLE
+
+notifications:
+    email: false
