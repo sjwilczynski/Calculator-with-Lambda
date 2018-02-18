@@ -9,20 +9,22 @@ install:
 script:
   - py.test
 
-before_deploy:
-   - make
+#The lines are commented because I deleted my AWS account
 
-deploy:
-  provider: lambda
-  access_key_id: $AWS_ACCESS_KEY_ID
-  secret_access_key: $AWS_SECRET_ACCESS_KEY
-  function_name: calculator
-  handler_name: lambda_handler
-  region: eu-central-1
-  runtime: python2.7
-  publish: true
-  zip: lambda.zip
-  role: $ROLE
+#before_deploy:
+#   - make
+
+#deploy:
+#  provider: lambda
+#  access_key_id: $AWS_ACCESS_KEY_ID
+#  secret_access_key: $AWS_SECRET_ACCESS_KEY
+#  function_name: calculator
+#  handler_name: lambda_handler
+#  region: eu-central-1
+#  runtime: python2.7
+#  publish: true
+#  zip: lambda.zip
+#  role: $ROLE
 
 notifications:
     email: false
